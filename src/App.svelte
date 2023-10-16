@@ -1,4 +1,7 @@
 <script>
+  import About from "./components/About.svelte";
+  import Contact from "./components/Contact.svelte";
+
   let sections = [
     "about me",
     "my resume",
@@ -9,44 +12,28 @@
 </script>
 
 <main>
-  <h1>Welcome to My Research Work Help</h1>
+  <h1>Welcome to Research Savvy Services</h1>
 
   {#each sections as section}
     <a href="#{section}">{section}</a>
   {/each}
 
   <section id="about me">
-    <h2>About Me</h2>
-    <p>Place your 'About Me' content here.</p>
-  </section>
-
-  <section id="my resume">
-    <h2>My Resume</h2>
-    <p>Place your 'Resume' content here.</p>
+    <About />
   </section>
 
   <section id="contact me">
-    <h2>Contact Me</h2>
-    <p>Place your 'Contact Me' content here.</p>
+    <Contact />
   </section>
 
-  <section id="book me">
-    <h2>Book Me</h2>
-    <p>Place your 'Book Me' content here.</p>
-    <p>Provide your UPI ID: [Your UPI ID]</p>
-  </section>
-
-  <section id="my projects">
-    <h2>My Projects</h2>
-    <p>Place your 'Projects' content here.</p>
-  </section>
+  <!-- Other sections here -->
 </main>
 
 <style>
   main {
     text-align: center;
     padding: 1em;
-    max-width: 240px;
+    max-width: 600px;
     margin: 0 auto;
   }
   a {
